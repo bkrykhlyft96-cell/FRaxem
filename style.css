@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 10px;
+  direction: rtl;
+  font-size: 16px;
+  color: #333;
+}
+
+.exam-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-credit {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.student-info input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.answers-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin-top: 15px;
+}
+
+.answer-card {
+  display: flex !important;
+  align-items: center;
+  width: 100% !important;
+  padding: 15px;
+  background: #f8fafc;
+  border: 2px solid #dbe2ea;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: right;
+  transition: 0.2s;
+}
+
+.answer-card:hover {
+  background: #eaf3ff;
+  border-color: #3b82f6;
+}
+
+.answer-card input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* تنسيق أزرار التنقل بجانب بعضها أو تحت بعضها حسب الشاشة */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  flex: 1;
+  margin-top: 0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.timer-box {
+  font-size: 18px;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.question-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* تنسيق مراجعة الإجابات النهائية وتلوين المربعات */
+.review-question-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.review-option {
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.correct-answer-highlight {
+  background-color: #dcfce7 !important;
+  border-color: #16a34a !important;
+  color: #14532d;
+  font-weight: bold;
+}
+
+.wrong-answer-highlight {
+  background-color: #fee2e2 !important;
+  border-color: #dc2626 !important;
+  color: #7f1d1d;
+  font-weight: bold;
+}

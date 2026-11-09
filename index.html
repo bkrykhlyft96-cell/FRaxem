@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اختبار صيانة حاسب - الصف الثاني</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="exam-container" id="exam-box">
+      <h2>اختبار مادة صيانة حاسب - الصف الثاني</h2>
+      <p class="instructor-credit">إعداد : مستر بكرى خليفة</p>
+
+      <!-- شاشة تسجيل بيانات الطالب -->
+      <div id="student-form">
+        <p>الرجاء إدخال بياناتك قبل بدء الامتحان:</p>
+        <div class="student-info">
+          <input
+            type="text"
+            id="student-name"
+            placeholder="اسم الطالب الثلاثي"
+            required
+          />
+          <input
+            type="text"
+            id="student-class"
+            placeholder="الفصل / الشعبة"
+            required
+          />
+        </div>
+        <button onclick="startExam()">بدء الامتحان</button>
+      </div>
+
+      <!-- شاشة الامتحان والأسئلة -->
+      <div id="quiz-screen" style="display: none">
+        <div class="timer-box">
+          الوقت المتبقي: <span id="timer">40:00</span>
+        </div>
+        <div id="question-container"></div>
+
+        <!-- أزرار التنقل: السابق والتالي -->
+        <div class="nav-buttons">
+          <button
+            id="prev-btn"
+            onclick="prevQuestion()"
+            style="display: none; background-color: #6c757d"
+          >
+            السؤال السابق
+          </button>
+          <button id="next-btn" onclick="nextQuestion()">السؤال التالي</button>
+        </div>
+      </div>
+
+      <!-- شاشة النتيجة ومراجعة الإجابات -->
+      <div id="result-screen" style="display: none">
+        <h3>نتيجة الاختبار</h3>
+        <p id="final-score-text"></p>
+
+        <h4 style="margin-top: 20px">مراجعة الإجابات:</h4>
+        <div id="review-container"></div>
+      </div>
+    </div>
+
+    <!-- إطار خفي لضمان إرسال النتائج لجوجل شيت -->
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+    ></iframe>
+
+    <script src="script.js"></script>
+  </body>
+</html>
